@@ -1,0 +1,92 @@
+.consent-wrapper {
+  position: fixed;
+  inset: 0;
+  z-index: 99999;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.55),
+    rgba(0, 0, 0, 0)
+  );
+  padding: 16px;
+  box-sizing: border-box;
+}
+
+.consent-card {
+  width: 100%;
+  max-width: 480px;
+  background: #ffffff;
+  border-radius: 14px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.25);
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    sans-serif;
+  color: #111;
+  overflow: hidden;
+  animation: consentSlideUp 0.45s ease;
+}
+
+@keyframes consentSlideUp {
+  from {
+    transform: translateY(40px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.consent-header {
+  padding: 16px 20px;
+  border-bottom: 1px solid #eee;
+  font-size: 15px;
+}
+
+.consent-body {
+  padding: 16px 20px;
+  font-size: 14px;
+  line-height: 1.5;
+  color: #444;
+}
+
+.consent-body em {
+  font-size: 12px;
+  color: #888;
+}
+
+.consent-actions {
+  display: flex;
+  gap: 12px;
+  padding: 16px 20px 20px;
+}
+
+.consent-btn {
+  flex: 1;
+  height: 40px;
+  border-radius: 8px;
+  border: none;
+  font-size: 14px;
+  cursor: pointer;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.consent-btn:active {
+  transform: translateY(1px);
+}
+
+.consent-accept {
+  background: #111;
+  color: #fff;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.25);
+}
+
+.consent-reject {
+  background: #f1f1f1;
+  color: #111;
+}
+
+.consent-btn:hover {
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.25);
+}

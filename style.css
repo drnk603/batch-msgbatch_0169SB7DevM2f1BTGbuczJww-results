@@ -435,10 +435,7 @@ address {
   background-color: var(--color-bg-alt);
 }
 
-.bg-dark {
-  background-color: var(--color-text);
-  color: var(--color-bg);
-}
+
 
 .bg-warning {
   background-color: var(--color-warning);
@@ -553,7 +550,7 @@ address {
 }
 
 .gap-3 {
-  gap: var(--space-md);
+  
 }
 
 .h-100 {
@@ -705,7 +702,7 @@ address {
 .navbar-nav {
   display: flex;
   align-items: center;
-  gap: var(--space-sm);
+  
   flex-wrap: wrap;
   list-style: none;
 }
@@ -854,7 +851,7 @@ address {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: var(--space-sm);
+  
   padding: var(--space-md) var(--space-xl);
   font-family: var(--font-secondary);
   font-size: var(--font-size-base);
@@ -1154,7 +1151,7 @@ address {
   flex-direction: column;
   flex: 1;
   padding: var(--space-xl);
-  gap: var(--space-md);
+  
 }
 
 .c-card__title {
@@ -1230,14 +1227,14 @@ address {
 .c-form {
   display: flex;
   flex-direction: column;
-  gap: var(--space-lg);
+  
   width: 100%;
 }
 
 .c-form__group {
   display: flex;
   flex-direction: column;
-  gap: var(--space-sm);
+  
 }
 
 .c-form__group.has-error .c-input,
@@ -1312,7 +1309,7 @@ address {
 .form-check {
   display: flex;
   align-items: flex-start;
-  gap: var(--space-sm);
+  
   padding: 0;
 }
 
@@ -1386,7 +1383,7 @@ address {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  gap: var(--space-sm);
+  
   padding: 0;
   margin: 0;
   list-style: none;
@@ -1396,7 +1393,7 @@ address {
 .breadcrumb-item {
   display: flex;
   align-items: center;
-  gap: var(--space-sm);
+  
 }
 
 .breadcrumb-item:not(:last-child)::after {
@@ -1422,7 +1419,7 @@ address {
 .accordion {
   display: flex;
   flex-direction: column;
-  gap: var(--space-md);
+  
 }
 
 .accordion-item {
@@ -1654,7 +1651,7 @@ address {
   }
 
   .gap-3 {
-    gap: var(--space-md);
+    
   }
 
   .c-form__group {
@@ -1871,5 +1868,31 @@ address {
   :root {
     --color-border: #000000;
     --color-text-light: #000000;
+  }
+}
+
+@media (max-width: 767px) {
+  * { gap: var(--space-md); }
+  * { gap: var(--space-sm); }
+  * { gap: var(--space-lg); }
+}
+
+/* AUTO-FIX: bg-dark improved contrast */
+.bg-dark > * {
+  color:white!important;
+}
+
+    body {
+          overflow-y: hidden;
+    }
+/* --- AUTO-INJECTED: AOS mobile/tablet override --- */
+@media (max-width: 1024px) {
+  [data-aos="fade-left"],
+  [data-aos="fade-right"] {
+    transform: translateX(0) !important;
+    opacity: 1 !important;
+  }
+  .c-logo__img {
+    display: none!important;
   }
 }
